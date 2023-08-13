@@ -1,5 +1,5 @@
 # RISC_V_cpu_verification
-项目结构RISC_V_cpu_verification
+```项目结构RISC_V_cpu_verification
 	  │
             ├─design
             │  ├─core
@@ -15,6 +15,7 @@
                ├─regs
                ├─core
                └─tinycpu
+```
 
 ## Project_rv: tiny_risc_v_cpu by [liangkangnan](https://gitee.com/liangkangnan/tinyriscv)
 
