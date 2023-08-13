@@ -1,6 +1,7 @@
 # RISC_V_cpu_verification
-```项目结构RISC_V_cpu_verification
-	  │
+```
+项目结构RISC_V_cpu_verification
+	    │
             ├─design
             │  ├─core
             │  ├─debug
