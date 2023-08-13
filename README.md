@@ -8,12 +8,13 @@
             │  ├─perips
             │  ├─soc
             │  └─utils
-            └─verification
-               ├─pc_reg
-               ├─regs
-               ├─core
-	       ├─random inst
-               └─tinycpu
+            ├─verification
+	    │  ├─pc_reg
+	    │  ├─regs
+	    │  ├─core
+	    │  ├─random inst
+	    │  ├─tinycpu
+	    └─README
 ```
 
 ## Project_rv: tiny_risc_v_cpu by [liangkangnan](https://gitee.com/liangkangnan/tinyriscv)
