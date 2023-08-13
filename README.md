@@ -145,16 +145,30 @@ tinyriscv_soc_top.v 结构分析
 
 
 ### 验证部分
+编译指令：make com   仿真：./simv -gui   查看覆盖率：make cov   查看波形图：make verdi    
 #### core内部模块
 ##### pc寄存器 
 测试1500条指令，验证了暂停，跳转，和pc+4的功能   
-编译指令：make com  仿真： ./simv -gui 查看覆盖率：make cov  
-  
-条件覆盖率为2/3是一条|语句未完全判断   
+结果比较方法：`result = get_actual.data==tmp_tran.data;`
+信号波形图：![pc_reg_wave](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/cf55d5fe-cbb2-4d92-8f45-13bc1af97bdf)
+
+代码覆盖率：![pc_reg_cov1](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/10b8ea46-c27d-42b4-ab57-c8883403ca19)
+
+功能覆盖率：![pc_reg_cov2](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/9fe856f6-c51e-4418-836a-15b4be9b1745)
+
+
+条件覆盖率为2/3是由于一条|语句未完全判断   
 rst，jump，hold，inst addr 均为100%；   
+
 #### regs 通用寄存器
 测试了优先级判断，寄存器读写（含零寄存器5'b0），jtag的寄存器读写操作     
 结果比较方法：`result = (get_actual.jrdata === tmp_tran.jrdata) && (get_actual.data1 === tmp_tran.data1) && (get_actual.data2 === tmp_tran.data2);//包含不定态，要用===`    
+信号波形图：![regs_wave](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/30369f38-6cd3-43d5-8ed4-2399fce642da)
+
+代码覆盖率：![regs_cov1](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/06035aee-7b02-4b09-9269-658f33c63bff)
+
+功能覆盖率：![regs_cov2](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/10432d23-c375-459a-a32d-af40d3ab8968)
+
 
 ##### tiny_cpu
 目前只测试指令执行和pc跳转功能 有两种思路：
@@ -165,3 +179,7 @@ rst，jump，hold，inst addr 均为100%；
 2.搭建随机指令生成平台
 使用instr_gen平台生成可配置的指令流，包括RV32im全部55条指令，可配置各种指令的占比。     
 使用指令生成平台控制指令，仅产生1500条指令便可达到很高的覆盖率(各指令权重均为1)，图中clint覆盖率较低是因为未考虑各种中断，而非指令不全
+代码覆盖率：![cov1](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/d9c92a67-f6fd-4bd7-ae21-96e5d2b65dad)
+
+功能覆盖率：![cov2](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/13b91937-51a6-443d-a890-71853f0cffeb)
+
