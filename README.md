@@ -1,4 +1,21 @@
 # RISC_V_cpu_verification
+项目结构RISC_V_cpu_verification
+	  │
+            ├─design
+            │  ├─core
+            │  ├─debug
+            │  ├─perips
+            │  ├─soc
+            │  └─utils
+            └─verification
+               ├─apb
+               ├─core
+               ├─div
+               ├─pc_reg
+               ├─regs
+               ├─core
+               └─tinycpu
+
 ## Project_rv: tiny_risc_v_cpu by [liangkangnan](https://gitee.com/liangkangnan/tinyriscv)
 
 ### 分析cpu设计文档
