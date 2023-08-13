@@ -9,12 +9,10 @@
             │  ├─soc
             │  └─utils
             └─verification
-               ├─apb
-               ├─core
-               ├─div
                ├─pc_reg
                ├─regs
                ├─core
+	       ├─random inst
                └─tinycpu
 ```
 
