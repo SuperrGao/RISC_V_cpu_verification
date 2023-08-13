@@ -100,7 +100,7 @@ module tinyriscv(
     clint u_clint(.clk(clk),.rst(rst),.int_flag_i(if_int_flag_o),.inst_i(id_inst_o),.inst_addr_i(id_inst_addr_o),.jump_flag_i(ex_jump_flag_o),.jump_addr_i(ex_jump_addr_o),.hold_flag_i(ctrl_hold_flag_o),.div_started_i(ex_div_start_o),.data_i(csr_clint_data_o),.csr_mtvec(csr_clint_csr_mtvec),.csr_mepc(csr_clint_csr_mepc),.csr_mstatus(csr_clint_csr_mstatus),.we_o(clint_we_o),.waddr_o(clint_waddr_o),.raddr_o(clint_raddr_o),.data_o(clint_data_o),.hold_flag_o(clint_hold_flag_o),.global_int_en_i(csr_global_int_en_o),.int_addr_o(clint_int_addr_o),.int_assert_o(clint_int_assert_o));
 
 ```
-tinycpu内部模块图：![tinyriscv](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/8037f02d-4a37-48d8-bade-8dc52c662e20)
+tinycpu结构图：![tinyriscv](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/8037f02d-4a37-48d8-bade-8dc52c662e20)
 
 ---
 tinyriscv_soc_top.v 结构分析
