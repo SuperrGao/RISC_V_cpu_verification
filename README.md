@@ -1,7 +1,7 @@
 # RISC_V_cpu_verification
 ## Project_rv: tiny_risc_v_cpu by [liangkangnan](https://gitee.com/liangkangnan/tinyriscv)
 
-### 设计部分
+### 分析cpu设计文档
 设计需求：三级流水线，即取指，译码，执行，支持RV32IM指令集等  rv内容参见 [rv中文手册](http://riscvbook.com/chinese/RISC-V-Reader-Chinese-v2p1.pdf)
 ```
           32bits RV32I基础整数指令集(47条) 扩展硬件乘法器：(R) : mul mulh mulhsu mulhu div divu rem remu
@@ -149,7 +149,7 @@ tinyriscv_soc_top.v 结构分析
 #### core内部模块
 ##### pc寄存器 
 测试1500条指令，验证了暂停，跳转，和pc+4的功能   
-结果比较方法：`result = get_actual.data==tmp_tran.data;`
+结果比较方法：`result = get_actual.data==tmp_tran.data;`    
 信号波形图：![pc_reg_wave](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/cf55d5fe-cbb2-4d92-8f45-13bc1af97bdf)
 
 代码覆盖率：![pc_reg_cov1](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/10b8ea46-c27d-42b4-ab57-c8883403ca19)
