@@ -183,7 +183,7 @@ rst，jump，hold，inst addr 均为100%；
 
 ##### regs 通用寄存器
 测试了优先级判断，寄存器读写（含零寄存器5'b0），jtag的寄存器读写操作     
-结果比较方法：`result = (get_actual.jrdata === tmp_tran.jrdata) && (get_actual.data1 === tmp_tran.data1) && (get_actual.data2 === tmp_tran.data2);//包含不定态X，要用===`    
+结果比较方法：`result = (get_actual.jrdata === tmp_tran.jrdata) && (get_actual.data1 === tmp_tran.data1) && (get_actual.data2 === tmp_tran.data2);//可能包含不定态X，要用算数全等===`    
 信号波形图：![regs_wave](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/30369f38-6cd3-43d5-8ed4-2399fce642da)
 
 代码覆盖率：![regs_cov1](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/06035aee-7b02-4b09-9269-658f33c63bff)
