@@ -181,9 +181,9 @@ tinyriscv_soc_top.v 结构分析
 条件覆盖率为2/3是由于一条|语句未完全判断   
 rst，jump，hold，inst addr 均为100%；   
 
-#### regs 通用寄存器
+##### regs 通用寄存器
 测试了优先级判断，寄存器读写（含零寄存器5'b0），jtag的寄存器读写操作     
-结果比较方法：`result = (get_actual.jrdata === tmp_tran.jrdata) && (get_actual.data1 === tmp_tran.data1) && (get_actual.data2 === tmp_tran.data2);//包含不定态，要用===`    
+结果比较方法：`result = (get_actual.jrdata === tmp_tran.jrdata) && (get_actual.data1 === tmp_tran.data1) && (get_actual.data2 === tmp_tran.data2);//包含不定态X，要用===`    
 信号波形图：![regs_wave](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/30369f38-6cd3-43d5-8ed4-2399fce642da)
 
 代码覆盖率：![regs_cov1](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/06035aee-7b02-4b09-9269-658f33c63bff)
@@ -195,7 +195,8 @@ rst，jump，hold，inst addr 均为100%；
 目前只测试指令执行和pc跳转功能 有两种思路：
 
 1.在transaction中直接生成随机指令
-会生成大量非法指令，很难达到覆盖率要求，例如使用15000条随机指令，代码覆盖率仅有60%，状态机覆盖率更是只有35%，所以有必要开发一个随机指令合法生成平台    
+会生成大量非法指令，很难达到覆盖率要求，例如使用20000条随机指令，代码覆盖率仅有61%，状态机覆盖率更是不到30%，所以有必要开发一个随机指令合法生成平台    
+代码覆盖率：![cov0](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/071c947a-d246-4035-9bb8-5951222556ab)
 
 2.搭建随机指令生成平台
 使用instr_gen平台生成可配置的指令流，包括RV32im全部55条指令，可配置各种指令的占比。     
