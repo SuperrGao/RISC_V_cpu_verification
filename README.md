@@ -13,7 +13,7 @@
 	    │  ├─regs
 	    │  ├─core
 	    │  ├─random inst
-	    │  ├─tinycpu
+	    │  └─tinycpu
 	    └─README
 ```
 
