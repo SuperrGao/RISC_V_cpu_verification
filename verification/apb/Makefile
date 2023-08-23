@@ -9,16 +9,16 @@ comp: clean com
 com:
 	vcs -R -full64 +v2k -fsdb +define+FSDB -sverilog -ntb_opts uvm-1.1 top_tb.sv -debug_all -l vcs.log -timescale=1ns/1ps	-cm line+cond+fsm+branch+tgl
 cov:
-	dve -full64 -covdir simv.vdb&
+	dve -covdir simv.vdb&
 simulate:
 	./simv -l sim.log                
 
 dve:
-	dve -full64 \
+	dve \
 	-vpd *.vpd &                     
 
 verdi:
-	verdi -full64 +v2k -sverilog -ntb_opts uvm-1.1 \
+	verdi \
 	-f verif.f \                     
 	-nologo \
 	-ssf *.fsdb &                    
