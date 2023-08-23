@@ -190,6 +190,22 @@ rst，jump，hold，inst addr 均为100%；
 
 功能覆盖率：![regs_cov2](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/10432d23-c375-459a-a32d-af40d3ab8968)
 
+##### 总线
+测试了主从设备间数据传输，主设备优先级判断，从设备的选择
+结果比较方法：`result =    (get_actual.s0_addr   == tmp_tran.s0_addr)   && (get_actual.s1_addr   == tmp_tran.s1_addr)   &&
+		(get_actual.s2_addr   == tmp_tran.s2_addr)   && (get_actual.s3_addr   == tmp_tran.s3_addr)   &&
+		(get_actual.s4_addr   == tmp_tran.s4_addr)   && (get_actual.s5_addr   == tmp_tran.s5_addr)   &&
+		(get_actual.m0_data_o == tmp_tran.m0_data_o) && (get_actual.m1_data_o == tmp_tran.m1_data_o) &&
+		(get_actual.m2_data_o == tmp_tran.m2_data_o) && (get_actual.m3_data_o == tmp_tran.m3_data_o) &&
+		(get_actual.s0_data_o == tmp_tran.s0_data_o) && (get_actual.s1_data_o == tmp_tran.s1_data_o) &&
+		(get_actual.s2_data_o == tmp_tran.s2_data_o) && (get_actual.s3_data_o == tmp_tran.s3_data_o) &&
+		(get_actual.s4_data_o == tmp_tran.s4_data_o) && (get_actual.s5_data_o == tmp_tran.s5_data_o);`
+  信号波形图：![Uploading apb_wave.png…]()
+
+  代码覆盖率：![apb_cov1](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/d1cc7434-616e-4909-9abf-25826ac07198)
+
+  功能覆盖率：![apb_cov2](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/70c492a0-0f67-4fab-8b93-04e6b92c187f)
+
 
 ##### tiny_cpu
 目前只测试指令执行和pc跳转功能 有两种思路：
