@@ -96,7 +96,7 @@ rst，jump，hold，inst addr 均为100%；
 功能覆盖率：![regs_cov2](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/10432d23-c375-459a-a32d-af40d3ab8968)
 
 ##### 总线
-测试了主从设备间数据传输，主设备优先级判断，从设备的选择
+测试了主从设备间数据传输，主设备优先级判断，从设备的选择，设计文档中grant1的输出初始化时为32'b1，结果比较时易出错
 结果比较方法：`result =    (get_actual.s0_addr   == tmp_tran.s0_addr)   && (get_actual.s1_addr   == tmp_tran.s1_addr)   &&
 		(get_actual.s2_addr   == tmp_tran.s2_addr)   && (get_actual.s3_addr   == tmp_tran.s3_addr)   &&
 		(get_actual.s4_addr   == tmp_tran.s4_addr)   && (get_actual.s5_addr   == tmp_tran.s5_addr)   &&
