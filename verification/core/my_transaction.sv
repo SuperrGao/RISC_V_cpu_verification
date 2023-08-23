@@ -13,7 +13,6 @@ class my_transaction extends uvm_sequence_item;
    rand bit[1:0]        rw[];
    
    
-
    constraint pload_cons{
       size >= 0;
       size <= 15000;

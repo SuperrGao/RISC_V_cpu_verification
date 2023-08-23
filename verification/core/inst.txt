@@ -20,6 +20,7 @@ R: 寄存器-寄存器操作   add sub sll slt sltu xor srl sra or and
       0000001 rs2 rs1 110 rd 0110011 R rem rd, rs1, rs2                 x[rd] = x[rs1] % x[rs2] signed
       0000001 rs2 rs1 111 rd 0110011 R remu rd, rs1, rs2                x[rd] = x[rs1] % x[rs2] unsigned
 
+
 I: 短立即数计算和访存load  lb lh lw lbu lhu addi slti sltiu xori ori andi fence fence.i ecall ebreak csrrw csrrs csrrc csrrwi cssrrsi csrrci
     格式： imm-12    rs1-5 func-3  rd-5   opcode-7  
       imm[11:0]       rs1  000  rd   0000011 I lb rd, offset(rs1)       x[rd] = sext(M[x[rs1] + sext(offset)][7:0])

@@ -31,6 +31,7 @@ task my_scoreboard::main_phase(uvm_phase phase);
          `uvm_info("my_scoreboard", "get one transaction model", UVM_LOW)
          expect_queue.push_back(get_expect);
       end
+	  
       while (1) begin
          act_port.get(get_actual);
          #1

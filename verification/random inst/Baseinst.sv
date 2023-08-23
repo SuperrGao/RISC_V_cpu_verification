@@ -15,6 +15,7 @@ class Baseinstr extends uvm_object;
   static privileged_reg_t    exclude_reg[];
   static privileged_reg_t    include_reg[];
 
+
   riscv_instr_gen_config     m_cfg;
 
   // Instruction attributes

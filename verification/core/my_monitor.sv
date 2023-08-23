@@ -44,6 +44,7 @@ task my_monitor::collect_one_pkt(my_transaction tr);
    logic[1:0]   rw_array[];
    int data_size;
    
+   
    while(1) begin
       @(posedge vif.clk);
       if(vif.flag) break;

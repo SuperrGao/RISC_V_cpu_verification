@@ -37,6 +37,7 @@ task my_model::main_phase(uvm_phase phase);
    logic [31:0] X[0:31];
    logic [31:0] csr[0:31];
    
+   
    logic [31:0] pc;
    logic [31:0] datai,datao,addr;
    logic [1:0] rw;

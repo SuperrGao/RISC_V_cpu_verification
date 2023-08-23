@@ -23,6 +23,7 @@ class my_driver extends uvm_driver#(my_transaction);//参数化 添加参数选�
    extern task drive_one_pkt(my_transaction tr);
 endclass
 
+
 task my_driver::main_phase(uvm_phase phase);
    vif.data <= 32'b0;
    vif.pc <= 32'b0;

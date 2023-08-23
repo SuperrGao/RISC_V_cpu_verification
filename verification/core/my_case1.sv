@@ -20,6 +20,7 @@ class case1_sequence extends uvm_sequence #(my_transaction);
          //m_trans.weight[39]==1;
          //m_trans.weight[40]==1;
          //m_trans.weight[41]==1;
+		 
          })
          `uvm_info("case1_sequence","uvm done",UVM_LOW);
       end

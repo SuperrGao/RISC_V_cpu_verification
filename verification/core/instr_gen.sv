@@ -114,6 +114,7 @@ constraint opcode_{
     }
 }
 
+
 function new(int size,int w[]);
     this.pc = new[size];
     this.size_all = size;

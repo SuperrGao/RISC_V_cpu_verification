@@ -21,7 +21,6 @@ class case0_sequence extends uvm_sequence #(my_transaction);
    `uvm_object_utils(case0_sequence)
 endclass
 
-
 class my_case0 extends base_test;
 
    function new(string name = "my_case0", uvm_component parent = null);
