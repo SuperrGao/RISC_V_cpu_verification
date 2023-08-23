@@ -200,7 +200,8 @@ rst，jump，hold，inst addr 均为100%；
 		(get_actual.s0_data_o == tmp_tran.s0_data_o) && (get_actual.s1_data_o == tmp_tran.s1_data_o) &&
 		(get_actual.s2_data_o == tmp_tran.s2_data_o) && (get_actual.s3_data_o == tmp_tran.s3_data_o) &&
 		(get_actual.s4_data_o == tmp_tran.s4_data_o) && (get_actual.s5_data_o == tmp_tran.s5_data_o);`
-  信号波形图：![Uploading apb_wave.png…]()
+  
+  信号波形图：![apb_wave](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/9baaef15-05ba-40a8-82cc-cba2843d40a6)
 
   代码覆盖率：![apb_cov1](https://github.com/SuperrGao/RISC_V_cpu_verification/assets/138287304/d1cc7434-616e-4909-9abf-25826ac07198)
 
